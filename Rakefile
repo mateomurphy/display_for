@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "display_for"
   gem.homepage = "http://github.com/mateomurphy/display_for"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: Rails library for displaying data}
-  gem.description = %Q{TODO: A Rails library for display data, in tabular and other formats}
+  gem.summary = %Q{Rails library for displaying data}
+  gem.description = %Q{A Rails library for display data, in tabular and other formats}
   gem.email = "mateo.murphy@gmail.com"
   gem.authors = ["Mateo Murphy"]
   # dependencies defined in Gemfile
