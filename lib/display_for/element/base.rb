@@ -1,16 +1,20 @@
 module DisplayFor
   module Element
     class Base
+      attr_reader :name
+      
       def initialize(builder, name, options = {}, &block)
         @builder, @name, @options, @block = builder, name, options, block
       end
     
       def label(resource_class = nil)
+        return nil if @options[:label] === false
+        
         name = @options[:label] || @name.to_sym
         
         return name unless name.is_a?(Symbol)
         
-        I18n.t(name, :scope => 'display_for.label', :default => default_label(resource_class) )
+        I18n.t(name, :scope => 'display_for.labels', :default => default_label(resource_class) )
       end        
         
       def default_label(resource_classs = nil)

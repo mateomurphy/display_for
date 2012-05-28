@@ -4,8 +4,7 @@ module DisplayFor
       def build_header
         result = ''
         @attributes.each do |attribute|
-          result << content_tag(:th, attribute.label(@resource_class))
-          html_class = nil
+          result << content_tag(:th, attribute.label(@resource_class), :class => attribute.name)
         end
         result << content_tag(:th, "Actions", :class => 'actions') if @actions.any?
 
@@ -41,7 +40,7 @@ module DisplayFor
 
         result = build_header + content_tag(:tbody, result)
 
-        content_tag(:table, result, :class => 'table table-bordered table-striped').html_safe
+        content_tag(:table, result, :class => "table table-bordered table-striped #{@resource_class.to_s.underscore}").html_safe
       end
     end
   end
