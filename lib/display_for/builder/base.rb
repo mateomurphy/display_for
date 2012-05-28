@@ -23,6 +23,10 @@ module DisplayFor
         @actions << Element::Action.new(self, name, options, &block)
       end
       
+      def html(name, options = {}, &block)
+        @attributes << Element::Html.new(self, name, options, &block)
+      end
+      
     end
   end
 end
