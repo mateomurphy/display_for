@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2012-05-27"
+  s.date = "2012-05-28"
   s.description = "TODO: A Rails library for display data, in tabular and other formats"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -24,7 +24,21 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "display_for.gemspec",
     "lib/display_for.rb",
+    "lib/display_for/builder.rb",
+    "lib/display_for/builder/base.rb",
+    "lib/display_for/builder/collection_base.rb",
+    "lib/display_for/builder/csv.rb",
+    "lib/display_for/builder/resource_base.rb",
+    "lib/display_for/builder/table.rb",
+    "lib/display_for/builder/view.rb",
+    "lib/display_for/element.rb",
+    "lib/display_for/element/action.rb",
+    "lib/display_for/element/attribute.rb",
+    "lib/display_for/element/base.rb",
+    "lib/display_for/element/html.rb",
+    "lib/display_for/helper.rb",
     "test/helper.rb",
     "test/test_display_for.rb"
   ]
