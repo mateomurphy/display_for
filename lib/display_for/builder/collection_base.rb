@@ -3,7 +3,7 @@ module DisplayFor
     class CollectionBase < Base
       attr_reader :collection
       
-      def initialize(resource_class, collection, template, &block)
+      def initialize(resource_class, collection, html_options, template, &block)
         @collection = collection
       
         if resource_class.is_a?(Array)
@@ -14,7 +14,7 @@ module DisplayFor
           @resource_class = resource_class
         end
       
-        super(template, &block)
+        super(html_options, template, &block)
       end
       
       def default_actions

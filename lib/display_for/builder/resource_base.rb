@@ -3,7 +3,7 @@ module DisplayFor
     class ResourceBase < Base
       attr_reader :resource
       
-      def initialize(resource, template, &block)
+      def initialize(resource, html_options, template, &block)
         if resource.is_a?(Array)
           @namespace = resource
           @resource = @namespace.pop
@@ -14,7 +14,7 @@ module DisplayFor
 
         @resource_class = @resource.class
       
-        super(template, &block)
+        super(html_options, template, &block)
       end
       
       def default_actions

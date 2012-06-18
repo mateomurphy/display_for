@@ -41,7 +41,8 @@ module DisplayFor
         
         result << build_actions
 
-        content_tag(:table, result, :class => 'table table-bordered table-striped').html_safe
+        html_options[:class] = "table table-bordered table-striped #{@resource_class.to_s.underscore}"
+        content_tag(:table, result, html_options).html_safe
       end
     end
   end
