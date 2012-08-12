@@ -18,8 +18,8 @@ module DisplayFor
       end
       
       def default_actions
-        action :show, :link_to => :resource_path
-        action :edit, :link_to => :edit_resource_path
+        action :show
+        action :edit, :link_to => lambda { |r| [:edit] + @namespace + [r] }
         action :delete, :method => :delete, :confirm => "Are you sure?"
       end
     end
