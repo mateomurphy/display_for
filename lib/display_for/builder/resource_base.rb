@@ -18,9 +18,9 @@ module DisplayFor
       end
       
       def default_actions
-        action :list, :link_to => :collection_path, :class => 'btn small'
-        action :edit, :link_to => :edit_resource_path, :class => 'btn small'
-        action :delete, :method => :delete, :confirm => "Are you sure?", :class => 'btn small danger'
+        action :list, :link_to => lambda { |r| @namespace + [@resource_class]}, :class => 'btn btn-small'
+        action :edit, :link_to => lambda { |r| [:edit] + @namespace + [r] }, :class => 'btn btn-small'
+        action :delete, :method => :delete, :confirm => "Are you sure?", :class => 'btn btn-small btn-danger'
       end
     end
   end
