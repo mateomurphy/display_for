@@ -40,7 +40,7 @@ module DisplayFor
 
         result = build_header + content_tag(:tbody, result)
 
-        html_options[:class] = "table table-bordered table-striped #{@resource_class.to_s.underscore}"
+        html_options[:class] = "table table-bordered table-striped #{@resource_class.to_s.underscore}-table"
         content_tag(:table, result, html_options).html_safe
       end
     end
