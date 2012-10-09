@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "display_for"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2012-08-12"
+  s.date = "2012-10-09"
   s.description = "A Rails library for display data, in tabular and other formats"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
