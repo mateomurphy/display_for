@@ -42,9 +42,19 @@ module DisplayFor
 
         result = build_header + content_tag(:tbody, result)
 
+        if @footer
+          result << content_tag(:tfoot, @footer.build_row(nil))
+        end
+
         html_options[:class] ||= "table table-bordered table-striped #{@resource_class.to_s.underscore}-table"
         content_tag(:table, result, html_options).html_safe
       end
+
+      def footer
+        @footer = Table.new(resource_class, [], html_options, template)
+        yield @footer
+      end
+
     end
   end
 end
