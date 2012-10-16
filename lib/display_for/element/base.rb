@@ -7,6 +7,10 @@ module DisplayFor
         @builder, @name, @options, @block = builder, name, options, block
       end
     
+      def html_options
+        @options[:html] || {}
+      end
+
       def label(resource_class = nil)
         return nil if @options[:label] === false
         

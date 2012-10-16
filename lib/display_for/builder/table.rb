@@ -14,7 +14,7 @@ module DisplayFor
       def build_row(resource)
         result = ''
         @attributes.each do |attribute|
-          result << content_tag(:td, attribute.content(resource))
+          result << content_tag(:td, attribute.content(resource), attribute.html_options)
         end
         result << content_tag(:td, build_actions(resource)) if @actions.any?
 
