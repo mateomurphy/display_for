@@ -10,10 +10,8 @@ module DisplayFor
         @attributes = []
         @actions = []
         @html_options = html_options
-        
-        raise "invalid resource class #{resource_class}" unless resource_class.respond_to?(:human_attribute_name)
       
-        block.call(self)
+        block.call(self) if block_given?
       end
       
       def attribute(name, options = {}, &block)

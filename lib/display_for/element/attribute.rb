@@ -2,6 +2,8 @@ module DisplayFor
   module Element
     class Attribute < Base
       def default_label(resource_class)
+        raise "#{resource_class} does not respond to human_attribute_name" unless resource_class.respond_to?(:human_attribute_name)
+
         resource_class.human_attribute_name(@name.to_s)
       end
     
