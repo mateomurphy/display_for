@@ -18,7 +18,9 @@ module DisplayFor
         end
         result << content_tag(:td, build_actions(resource)) if @actions.any?
 
-        content_tag(:tr, result.html_safe, :id => "#{@resource_class}_#{resource.id}".underscore) << "\n"
+        options = {}
+        options[:id] = "#{@resource_class}_#{resource.id}".underscore if resource
+        content_tag(:tr, result.html_safe, options) << "\n"
       end
     
       def build_actions(resource)
