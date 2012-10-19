@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "display_for"
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2012-10-13"
+  s.date = "2012-10-19"
   s.description = "A Rails library for display data, in tabular and other formats"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     ".document",
+    ".rspec",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
@@ -39,8 +40,10 @@ Gem::Specification.new do |s|
     "lib/display_for/element/base.rb",
     "lib/display_for/element/html.rb",
     "lib/display_for/helper.rb",
-    "test/helper.rb",
-    "test/test_display_for.rb"
+    "spec/lib/builder/table_spec.rb",
+    "spec/spec_helper.rb",
+    "spec/support/test_model.rb",
+    "spec/support/test_template.rb"
   ]
   s.homepage = "http://github.com/mateomurphy/display_for"
   s.licenses = ["MIT"]
