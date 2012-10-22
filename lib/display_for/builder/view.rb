@@ -6,8 +6,8 @@ module DisplayFor
       def build_header
         result = ''
 
-        result << content_tag(:th, "Attribute")
-        result << content_tag(:th, "Value")
+        result << content_tag(:th, "Attribute", :class => "col_attribute")
+        result << content_tag(:th, "Value", :class => "col_value")
 
         content_tag(:thead, content_tag(:tr, result.html_safe)) << "\n"
       end    

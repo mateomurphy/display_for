@@ -4,7 +4,7 @@ module DisplayFor
       def build_header
         result = ''
         @attributes.each do |attribute|
-          result << content_tag(:th, attribute.label(@resource_class), :class => "#{@resource_class}_#{attribute.name}".underscore)
+          result << content_tag(:th, attribute.label(@resource_class), :class => "col_#{attribute.name}".underscore)
         end
         result << content_tag(:th, "Actions", :class => 'actions') if @actions.any?
 

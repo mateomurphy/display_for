@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-OUTPUT = %q|<table class="table table-bordered table-striped test_model-table"><thead><tr><th class="test_model_id">id</th><th class="test_model_first_name">first_name</th><th class="test_model_last_name">last_name</th></tr></thead>
+OUTPUT = %q|<table class="table table-bordered table-striped test_model-table"><thead><tr><th class="col_id">id</th><th class="col_first_name">first_name</th><th class="col_last_name">last_name</th></tr></thead>
 <tbody><tr id="test_model_1"><td>1</td><td>foo</td><td>bar</td></tr>
 </tbody><tfoot><tr><td colspan="3">&nbsp;</td></tr>
 </tfoot></table>|
