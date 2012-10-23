@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "display_for"
-  s.version = "0.1.7"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mateo Murphy"]
-  s.date = "2012-10-22"
+  s.date = "2012-10-23"
   s.description = "A Rails library for display data, in tabular and other formats"
   s.email = "mateo.murphy@gmail.com"
   s.extra_rdoc_files = [
@@ -58,14 +58,14 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rails>, ["~> 3.2.8"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.1.0"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.2.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.3"])
       s.add_development_dependency(%q<simplecov>, [">= 0"])
     else
       s.add_dependency(%q<rails>, ["~> 3.2.8"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
-      s.add_dependency(%q<bundler>, ["~> 1.1.0"])
+      s.add_dependency(%q<bundler>, ["~> 1.2.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
       s.add_dependency(%q<simplecov>, [">= 0"])
     end
@@ -73,7 +73,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rails>, ["~> 3.2.8"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
-    s.add_dependency(%q<bundler>, ["~> 1.1.0"])
+    s.add_dependency(%q<bundler>, ["~> 1.2.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
     s.add_dependency(%q<simplecov>, [">= 0"])
   end
