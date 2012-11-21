@@ -25,14 +25,23 @@ module DisplayFor
       end
   
       def to_s
-        result = ''.html_safe
+        result = "\n".html_safe
         
         @collection.each do |resource|
           result << build_row(resource)
         end
 
+        if @footer
+          result << @footer.build_row(nil)
+        end
+
         html_options[:class] ||= "list #{@resource_class.to_s.underscore}-list"
         content_tag(:ul, result, html_options).html_safe
+      end
+
+      def footer
+        @footer = List.new(resource_class, [], html_options, template)
+        yield @footer
       end
 
     end

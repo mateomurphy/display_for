@@ -1,6 +1,8 @@
 require 'spec_helper'
 
-LIST_OUTPUT = %q|<ul class="list test_model-list"><li id="test_model_1"><span>1</span><span>foo</span><span>bar</span></li>
+LIST_OUTPUT = %q|<ul class="list test_model-list">
+<li id="test_model_1"><span>1</span><span>foo</span><span>bar</span></li>
+<li><span>&nbsp;</span></li>
 </ul>|
 
 module DisplayFor
@@ -12,6 +14,11 @@ module DisplayFor
           t.attribute :id
           t.attribute :first_name
           t.attribute :last_name
+          t.footer do |f|
+            f.html :form do
+              '&nbsp;'.html_safe
+            end
+          end          
         end
       end
 

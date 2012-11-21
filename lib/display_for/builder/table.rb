@@ -34,7 +34,7 @@ module DisplayFor
       end
   
       def to_s
-        result = ''.html_safe
+        result = "\n".html_safe
         
         @collection.each do |resource|
           result << build_row(resource)
