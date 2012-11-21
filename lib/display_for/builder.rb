@@ -3,6 +3,7 @@ module DisplayFor
     autoload :Base,           'display_for/builder/base'
     autoload :CollectionBase, 'display_for/builder/collection_base'
     autoload :Csv,            'display_for/builder/csv'
+    autoload :List,           'display_for/builder/list'
     autoload :ResourceBase,   'display_for/builder/resource_base'
     autoload :Table,          'display_for/builder/table'
     autoload :View,           'display_for/builder/view'

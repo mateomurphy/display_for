@@ -1,5 +1,9 @@
 module DisplayFor
   module Helper
+    def list_for(resource_class, collection, html_options={}, &block)
+      Builder::List.new(resource_class, collection, html_options, self, &block).to_s
+    end
+
     def table_for(resource_class, collection, html_options={}, &block)
       Builder::Table.new(resource_class, collection, html_options, self, &block).to_s
     end
