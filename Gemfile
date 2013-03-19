@@ -6,10 +6,10 @@ source "http://rubygems.org"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :test, :development do
-  gem "rails", "~> 3.2.8"
+  gem "rails", "~> 3.2.13"
   gem 'rspec', '>=0'  
   gem "rdoc", "~> 3.12"
-  gem "bundler", "~> 1.2.0"
+  gem "bundler", "~> 1.3.4"
   gem "jeweler", "~> 1.8.3"
   gem "simplecov"
 end
